@@ -8,6 +8,15 @@
 ;; setup
 (lore.randomseed 1234) ;; TODO: change later
 
+
+;; random dates
+(local min-date 2399)
+(local max-date 2499)
+(fn rand-date [offset]
+  (let [offsetA (or offset 0)]
+    (+ (lume.round (lume.random min-date max-date))
+       offsetA)))
+                  
 ;; naming things
 (local basic-consonants {:p "p"
                          :t "t"
@@ -47,7 +56,7 @@
            (name 1 "intergalactic")
            " Galactic Guide Book"))
 
-(local global-year (lume.round (lume.random 2399 2499)))
+(local global-year (rand-date))
 
 (pp global-title)
 (pp (.. "©" global-year))
