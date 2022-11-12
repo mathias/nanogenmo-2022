@@ -1,3 +1,6 @@
+# Lua / Fennel libs:
+lib/*
+
 # Compiled Lua sources
 luac.out
 
