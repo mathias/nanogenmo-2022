@@ -17,7 +17,8 @@
     (+ (lume.round (lume.random min-date max-date))
        offsetA)))
                   
-;; naming things
+;; naming things -- heavily inspired by
+;; https://github.com/mewo2/naming-language/blob/master/language.js
 (local basic-consonants {:p "p"
                          :t "t"
                          :k "k"
